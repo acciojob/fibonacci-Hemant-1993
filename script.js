@@ -1,13 +1,12 @@
 function fibonacci(num) {
-// your code here
-	 if (num <= 1) {
-    return num;
-  }
-  const fib = [0, 1];
-  for (let i = 2; i <= num; i++) {
-    fib[i] = fib[i - 1] + fib[i - 2];
-  }
-  return fib[num];
+    if (num <= 0) return 0;
+    if (num === 1) return 1;
+    return fibonacci(num - 1) + fibonacci(num - 2);
 }
+
+// Test the function
+console.log(fibonacci(1)); // Output: 0
+console.log(fibonacci(5)); // Output: 3
+
 
 module.exports = fibonacci;
